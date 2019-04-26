@@ -14,6 +14,19 @@ typedef struct TreeNode {
     TreeNode *left;
     TreeNode *right;
 } TreeNode;
+typedef struct TreeListNode {
+    TreeNode *node;
+    TreeListNode *nextY;
+    TreeListNode *nextX;
+} TreeListNode;
+
+TreeListNode *newEmptyTreeListNode() {
+    TreeListNode *node = (TreeListNode *)malloc(sizeof(TreeListNode));
+    node->node = nullptr;
+    node->nextX = nullptr;
+    node->nextY = nullptr;
+    return node;
+}
 
 typedef struct NodeVal {
     char* val;
@@ -129,11 +142,65 @@ TreeNode *createTree(char *cs) {
     setNodes(tree, 0, &node);
     return tree->left;
 }
+
+void printTree(TreeNode *tree) {
+    TreeListNode *node = newEmptyTreeListNode();
+    node->node = tree;
+    if (node->node) {
+        printf("%s, ", node->node->val);
+    }else {
+        printf("null, ");
+    }
+    
+    TreeListNode *nodeX = node;
+    while (nodeX != nullptr) {
+        TreeListNode *nodeY = nodeX;
+        TreeListNode *nodeY2 = nullptr;
+        while (nodeY != nullptr) {
+            if (nodeY->node == nullptr || (nodeY->node->left == nullptr && nodeY->node->right == nullptr)) {
+                nodeY = nodeY->nextY;
+                continue;
+            }
+            TreeListNode *tmp = newEmptyTreeListNode();
+            tmp->node = nodeY->node->left;
+            if (nodeX->nextX == nullptr) {
+                nodeX->nextX = tmp;
+                nodeY2 = tmp;
+            }else {
+                nodeY2->nextY = tmp;
+                nodeY2 = nodeY2->nextY;
+            }
+            if (tmp->node) {
+                printf("%s, ", tmp->node->val);
+            }else {
+                printf("null, ");
+            }
+            
+            tmp = newEmptyTreeListNode();
+            tmp->node = nodeY->node->right;
+            nodeY2->nextY = tmp;
+            if (tmp->node) {
+                printf("%s, ", tmp->node->val);
+            }else {
+                printf("null, ");
+            }
+
+            nodeY2 = nodeY2->nextY;
+            nodeY = nodeY->nextY;
+        }
+        nodeX = nodeX->nextX;
+    }
+}
+void trees(char *cs) {
+    printf("%s \n", cs);
+    TreeNode *tree = createTree(cs);
+    printTree(tree);
+    printf("\n\n");
+}
 //https://leetcode-cn.com/problems/recover-a-tree-from-preorder-traversal/
 void testTreeNode() {
-//    char *cs = "1-2--3--4-5--6--7";
-//    char *cs = "1-2--3---4-5--6---7";
-    char *cs = "1-401--349---90--88";
-    TreeNode *tree = createTree(cs);
+    trees("1-2--3--4-5--6--7");
+    trees("1-2--3---4-5--6---7");
+    trees("1-401--349---90--88");
     printf("");
 }
