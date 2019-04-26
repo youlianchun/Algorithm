@@ -7,13 +7,14 @@
 //
 
 #include <iostream>
+#include <stdlib.h>
 
 extern bool isTree(int sides[5][2]);
 extern void perm(int data[4]);
 extern void edgeArr(int xCount, int yCount, void(^index)(int x, int y));
 extern void testSpinTree();
 extern void testGather();
-
+extern void testTreeNode();
 
 int main(int argc, const char * argv[]) {
 //    testSpinTree();
@@ -27,6 +28,8 @@ int main(int argc, const char * argv[]) {
 //        printf("%d, %d", x, y);
 //    });
 
-    testGather();
+    testTreeNode();
+    
     return 0;
 }
+

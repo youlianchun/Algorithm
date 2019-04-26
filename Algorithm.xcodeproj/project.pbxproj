@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A96D35F122729C5D00513ECD /* trees.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A96D35F022729C5D00513ECD /* trees.cpp */; };
 		A9C447132253029400207493 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A9C447122253029400207493 /* main.cpp */; };
 		A9C4471A225334E700207493 /* isTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A9C44719225334E700207493 /* isTree.cpp */; };
 		A9C4471C2253366800207493 /* permutation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A9C4471B2253366800207493 /* permutation.cpp */; };
@@ -29,6 +30,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A96D35F022729C5D00513ECD /* trees.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = trees.cpp; sourceTree = "<group>"; };
 		A9C4470F2253029400207493 /* Algorithm */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Algorithm; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9C447122253029400207493 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		A9C44719225334E700207493 /* isTree.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = isTree.cpp; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				A9C4471F2253450C00207493 /* treeSpin2.cpp */,
 				A9C44721225356E600207493 /* gather.cpp */,
 				A9C447232253646900207493 /* extremeVal.cpp */,
+				A96D35F022729C5D00513ECD /* trees.cpp */,
 			);
 			path = Algorithm;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 				A9C447132253029400207493 /* main.cpp in Sources */,
 				A9C4471C2253366800207493 /* permutation.cpp in Sources */,
 				A9C447202253450C00207493 /* treeSpin2.cpp in Sources */,
+				A96D35F122729C5D00513ECD /* trees.cpp in Sources */,
 				A9C4471E2253416E00207493 /* edgeArr.cpp in Sources */,
 				A9C4471A225334E700207493 /* isTree.cpp in Sources */,
 			);
