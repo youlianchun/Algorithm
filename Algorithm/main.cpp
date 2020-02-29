@@ -15,7 +15,7 @@ extern void edgeArr(int xCount, int yCount, void(^index)(int x, int y));
 extern void testSpinTree();
 extern void testGather();
 extern void testTreeNode();
-
+extern void testToInt();
 int main(int argc, const char * argv[]) {
 //    testSpinTree();
 //    int data0[5][2] = { {0, 1}, {1, 2}, {2, 3}, {1, 3}, {1, 4} };
@@ -28,8 +28,8 @@ int main(int argc, const char * argv[]) {
 //        printf("%d, %d", x, y);
 //    });
 
-    testTreeNode();
-    
+//    testTreeNode();
+    testToInt();
     return 0;
 }
 
